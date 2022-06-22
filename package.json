@@ -1,0 +1,54 @@
+{
+  "private": true,
+  "main": "./src/main.js",
+  "homepage": "http://.",
+  "scripts": {
+    "start": "PORT=3000 umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "electron-dev": "electron . dev",
+    "electron": "electron ."
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "antd": "^4.21.3",
+    "axios": "^0.27.2",
+    "electron": "^19.0.5",
+    "electron-log": "4.4.7",
+    "electron-updater": "5.0.1",
+    "express": "^4.18.1",
+    "moment": "^2.29.3",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "umi": "^3.5.26"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.5.26",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  },
+  "name": "time",
+  "description": "## Getting Started",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC"
+}
